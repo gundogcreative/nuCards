@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+  <title>nuHome Promotions - New Homeowner Marketing Done Right.</title>
+
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <link href="assets/css/nucards.css" rel="stylesheet">
+  
+  <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  
+  <!--[if lte IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.2/jquery.xdomainrequest.min.js"></script>      
+  <![endif]-->
+</head>
+
+<body>
+
+<section id="header">
+  <section id="nav">
+    <div class="container">
+      <div id="brand">
+        <!--<span class="nucards">nuCards</span>-->
+        <a href="#"><img src="assets/img/nuHomePromotionsLogo.svg" class="nuHome" alt="" title=""></a>
+      </div><!--/ #brand -->
+      
+      <a href="#navigation" data-toggle="collapse" id="mobileNavControl" class=""><i class="fa fa-bars"></i></a>
+
+      <div id="menu">
+        <ul id="navigation" class="collapse">
+          <li class=""><a href="#">Home</a></li>
+          <li class=""><a href="#">About</a></li>
+          <li class=""><a href="#">Company</a></li>
+          <li class=""><a href="#">Markets</a></li>
+          <li class=""><a href="#">News</a></li>
+          <li class=""><a href="#">Contact</a></li>
+          <li class="activate"><a href="javascript:void(0);" data-toggle="modal" data-target="#requestInfoModal">Request Info</a></li>
+        </ul><!--/ #navigation -->
+      </div><!--/ #menu -->
+    </div><!-- .container -->
+  </section><!--/ #nav -->
+
+  <section id="hero" class="">
+    <div class="container">
+      <h1>Upload Artwork</h1>
+        <h3>After this, you're that much closer to being delivered in the Welcome Box!</h3>
+    </div><!--/ .container -->
+  </section><!--/ #hero -->
+</section><!--/ #header -->
+  
+<section id="content" class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="summary">Keep in mind, the higher the quality artwork and more details you provide, the faster your card(s) will be created and ready for production.</h3>
+      </div><!--/ .col-md-12 -->
+    </div><!--/ .row -->
+    
+    <hr>
+      
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        
+        <form id="artworkSubmission">
+          <h4 class="formSectionTitle">1. Account Details</h4>
+          
+          <div class="form-group">
+            <label class="form-label" for="businessName">Business Legal Name <span class="required">*</span></label>
+            <p class="help-block error">This Field is Required</p>
+            <input type="text" class="form-control" id="businessName" name="businessName" placeholder="Your company's legal name...">
+            <p class="help-block">If the customer is already in Salesforce, please use the Account Name for this field.</p>
+          </div><!--/ .form-group -->
+          
+          <div class="form-group">
+            <label class="form-label" for="franchisedCheck">Is This a Franchised Business?</label>
+            <input type="checkbox" id="franchisedCheck" name="franchisedCheck" data-toggle="toggle" data-on="Yes" data-off="No">
+          </div><!--/ .form-group -->
+
+          <div class="form-group">
+            <label class="form-label" for="artworkContact">Business Contact for Approval <span class="required">*</span></label>
+            <input type="text" class="form-control" id="artworkContact" name="artworkContact" placeholder="Individual to approve artwork...">
+          </div><!--/ .form-group -->
+          
+            <div class="row">
+              <div class="col-md-6"> 
+                <div class="form-group">
+                  <label class="form-label" for="artworkContactEmail">Email Address <span class="required">*</span></label>
+                  <input type="text" class="form-control" id="artworkContactEmail" name="artworkContactEmail" placeholder="Contact email address...">
+                </div><!--/ .form-group -->
+              </div><!--/ .col-md-6 -->
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form-label" for="artworkContactPhone">Phone Number <span class="required">*</span></label>
+                  <input type="text" class="form-control" id="artworkContactPhone" name="artworkContactPhone"  data-mask="(999)-999-9999" placeholder="Contact phone number...">
+                </div><!--/ .form-group -->
+              </div><!--/ .col-md-6 -->
+            </div><!--/ .row -->
+          
+          <div class="form-group">
+            <label class="form-label" for="sfAccountId">Salesforce Account ID <span class="required">*</span></label>
+            <input type="text" class="form-control" id="sfAccountId" name="sfAccountId" placeholder="Preassigned Salesforce Account ID...">
+          </div><!--/ .form-group -->
+          
+          <div class="form-group">
+            <label class="form-label" for="accountRep">Account Representative <span class="required">*</span></label>
+            <input type="text" class="form-control" id="accountRep" name="accountRep" placeholder="Your account representative's name...">
+          </div><!--/ .form-group -->
+          
+          <hr>
+          
+          <h4 class="formSectionTitle">2. Branch Details/Requested DID</h4>
+          
+          <div class="row well well-sm">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label class="form-label" for="branch1">Branch</label>
+                <select class="form-control" id="branch1" name="branch1" placeholder="Please select...">
+                  <option>AZ - Phoenix East (AZPHX-EAST)</option>
+                  <option>AZ - Phoenix North (AZPHX-NORTH)</option>
+                  <option>AZ - Phoenix West (AZPHX-WEST)</option>
+                  <option>AZ - Tucson Metro (AZTUC)</option>
+                  <option>CA - San Diego (CASDI)</option>
+                  <option>CA - Orange County (CAOCC)</option>
+                </select>
+              </div><!--/ .form-group -->
+            </div><!--/ .col-md-4 -->
+            
+            <div class="col-md-3">
+              <div class="form-group">
+                <label class="form-label" for="areaCode1">Area Code</label>
+                <select class="form-control" id="areaCode1" name="areaCode1" placeholder="Please select...">
+                  <option>AZ - (480)</option>
+                  <option>AZ - (520)</option>
+                  <option>AZ - (602)</option>
+                  <option>AZ - (623)</option>
+                  <option>CA - (951)</option>
+                  <option>CA - (314)</option>
+                  <option>US - (844)</option>
+                </select>
+              </div><!--/ .form-group -->
+            </div><!--/ .col-md-3 -->
+            
+            <div class="col-md-5">
+              <div class="form-group">
+                <label class="form-label" for="ftnumber1">Forward to Number</label>
+                <input type="text" class="form-control" id="ftnumber1" name="ftnumber1" data-mask="(999)-999-9999" placeholder="Forwarding number...">
+              </div><!--/ .form-group -->
+            </div><!--/ .col-md-5 -->
+          </div><!--/ .row -->
+          
+          <a href="#" class="btn btn-default btn-block">Add Another Market</a>
+          
+          <hr>
+          
+          <h4 class="formSectionTitle">3. nuCard Data & Stipulations</h4>
+          
+            <div class="form-group">
+              <label class="form-label" for="dollarValue">nuCard Dollar Value</label>
+              <input type="text" class="form-control" id="dollarValue" name="dollarValue" placeholder="Your nuCard $ value...">
+              <p class="help-block">The dollar amount must be a whole number and shift in $5 increments.</p>
+            </div><!--/ .form-group -->
+          
+            <div class="form-group">
+              <label class="form-label">Does your card require a minimum purchase?</label>
+              <input type="checkbox" id="minPurchaseCheck" name="minPurchaseCheck" data-toggle="toggle" data-on="Yes" data-off="No">
+              <div id="console-event"></div>
+              <p class="help-block"><span class="label label-primary nowrap">Cards with a required minimum purchase might lack performance.</span></p>
+            </div><!--/ .form-group -->
+          
+            <div class="form-group collapse" id="minPurchaseFormGroup">
+              <label class="form-label" for="minPurchase">What minimum purchase is required for redemption?</label>
+              <input type="text" class="form-control" id="minPurchase" name="minPurchase" placeholder="Minimum purchase amount...">
+            </div><!--/ .form-group -->
+          
+            <div class="form-group">
+              <label class="form-label">Is the offer valid only towards something specific?</label>
+              <input type="checkbox" id="validTowardsCheck" name="validTowardsCheck" data-toggle="toggle" data-on="Yes" data-off="No">
+              <div id="console-event"></div>
+            </div><!--/ .form-group -->
+          
+            <div class="form-group collapse" id="validTowardsFormGroup">
+              <label class="form-label" for="validTowards">List specific services/products</label>
+              <input type="text" class="form-control" id="validTowards" name="validTowards" placeholder="Separate services/products with comma...">
+            </div><!--/ .form-group -->
+          
+            <div class="form-group">
+              <label class="form-label">Suggested nuCard Stipulations (please select)</label>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" checked>Cannot be redeemed for cash.</label>
+                </div><!--/ .checkbox -->
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Cannot be combined with other offers and or discounts.</label>
+                </div><!--/ .checkbox -->
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" checked>Limit one per customer.</label>
+                </div><!--/ .checkbox -->
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" checked>One time use.</label>
+                </div><!--/ .checkbox -->
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" checked>Some restrictions apply, call for details.</label>
+                </div><!--/ .checkbox -->
+            </div><!--/ .form-group -->
+          
+            <div class="form-group">
+              <label class="form-label" for="backStipulations">Generated Stipulations</label>
+              <textarea class="form-control" id="backStipulations" name="backStipulations" rows="6">*Redeemable towards [validTowards]. [minPurchase] minimum purchase required. Cannot be redeemed for cash. Cannot be combined with other offers and or discounts. Limit one per customer. One time use. Some restrictions apply, call for details.</textarea>
+              <p class="help-block"><strong>Limit 500 characters</strong></p>
+            </div><!--/ .form-group -->
+          
+            <div class="form-group">
+              <label class="form-label">Do you need license numbers on the card?</label>
+              <input type="checkbox" id="contractorLicenseCheck" name="licenseCheck" data-toggle="toggle" data-on="Yes" data-off="No">
+              <div id="console-event"></div>
+            </div><!--/ .form-group -->
+          
+            <div class="collapse" id="contractorLicenseFormGroup">
+              <div class="well" id="contractorLicenseGroup1">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label class="form-label" for="contractorLicenseState1">State</label>
+                        <select class="form-control" id="contractorLicenseState1" name="contractorLicenseState1" placeholder="Please select...">
+                          <option>AZ</option>
+                          <option>AL</option>
+                          <option>CA</option>
+                          <option>NV</option>
+                          <option>TX</option>
+                          <option>VA</option>
+                        </select>
+                    </div><!--/ .form-group -->
+                  </div><!--/ .col-md-3 -->
+
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <label class="form-label" for="contractorLicenseNumber1">License Number (include designator)</label>
+                      <input type="text" class="form-control" id="contractorLicenseNumber1" name="contractorLicenseNumber1" placeholder="License number...">
+                    </div><!--/ .form-group -->
+                  </div><!--/ .col-md-9 -->
+                </div><!--/ .row -->
+              </div><!--/ .well #contractorLicenseGroup1 -->
+          
+              <a href="#" class="btn btn-default btn-block">Add Another License</a>
+              
+            </div><!--/ #contractorsLicenseFormGroup -->
+          
+            <hr>
+          
+            <div class="form-group">
+              <label class="form-label" for="artSpecial">Artwork Special Requests</label>
+              <textarea class="form-control" id="artSpecial" name="artSpecial" rows="3"></textarea>
+            </div><!--/ .form-group -->
+          
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Submit to Art Department</button>
+          </div><!--/ .form-group -->
+        </form><!--/ #artworkSubmission -->
+        
+      </div><!--/ .col-md-6 -->
+    </div><!--/ .row -->
+  
+  </div><!--/ .container -->
+</section><!--/ #content -->
+  
+<section id="" class="subFootCall">
+  <div class="container">
+    <h2>Make <u>Smarter</u> Marketing Decisions.</h2>
+      <h4>We've made marketing smarter and more cost effective than ever before.</h4>
+        <a href="#" class="btn btn-default" data-toggle="modal" data-target="#requestInfoModal">Show Me How!</a>
+  </div><!--/ .container -->
+</section><!--/ .subFootCall -->
+    
+<section id="subFooter">
+  <div class="container">
+    <a href="http://www.twitter.com/nuhomepromos" target="_blank"><i class="fa fa-twitter"></i><span id="tweecool"></span></a>
+  </div><!--/ .container -->
+</section><!--/ #subFooter -->
+
+<section id="footer">
+  <div class="container">
+    <div id="quickLinks" class="row">
+      <div id="" class="col-sm-6 col-md-3">
+        <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Management Team</a></li>
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Markets</a></li>
+            <li><a href="#">Sales</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+      </div><!--/ .col-sm-6 .col-md-3 -->
+      
+      <div id="" class="col-sm-6 col-md-3">
+        <h4>Sales & Support</h4>
+          <ul>
+            <li>
+              <address>
+                <strong>Sales</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+              </address>
+            </li>
+            <li>
+              <address>
+                <strong>Gift Card Services</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+              </address>
+            </li>
+            <li>
+              <address>
+                <strong>Data Support</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+              </address>
+            </li>
+          </ul>
+      </div><!--/ .col-sm-6 .col-md-3 -->
+      
+      <div id="" class="col-sm-6 col-md-3">
+        <h4>A Word From Our CEO</h4>
+          <h5><span>"</span>We’re pioneering new homeowner marketing techniques. We’ve streamlined the marketing process to new homeowners and made it cost-effective and affordable for businesses alike. We are confident that your goals can be reached when partnering with nuHome Promotions.<span>"</span><br/><span><span>- Matthew Willes | CEO</span></span></h5>
+      </div><!--/ .col-sm-6 .col-md-3 -->
+      
+      <div class="col-sm-6 col-md-3" id="socialLinks">
+        <h4>Socialize With Us!</h4>
+          <ul>
+            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" class="googleplus"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+          </ul>
+        <h4>Subscribe for Updates!</h4>
+          <form>
+            <div class="form-group">
+              <input type="email" class="form-control" id="FORMID" placeholder="Your email address...">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-white">Subscribe</button>
+            </div>
+          </form>
+      </div><!--/ .col-sm-6 .col-md-3 -->
+    </div><!--/ #quickLinks .row -->
+    
+    <div id="footerLegal">
+      <div class="left">
+        <p>2015 &copy; nuCards, Inc. All rights reserved.</p>
+      </div><!--/ .left -->
+
+      <div class="right">
+        <ul>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </div><!--/ .right -->
+    </div><!--/ #footerLegal -->
+ </div><!--/ .container -->
+</section><!--/ #footer -->
+    
+
+  
+<!-- Modal -->
+<div class="modal fade" id="requestInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+        <h4 class="modal-title" id="myModalLabel">Request More Info!</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="formHeader">Convert New Homeowners into Paying Customers.<span>Fill out the form below and someone will be in touch shortly!</span></div>
+          
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="form-group">
+                <label for="FORMID">Organization <span class="required">*</span></label>
+                <input type="text" class="form-control" id="FORMID" placeholder="ABC Company">
+              </div>
+            </div><!--/ .col-lg-12 -->
+            
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="FORMID">Full name <span class="required">*</span></label>
+                <input type="text" class="form-control" id="FORMID" placeholder="John Doe">
+              </div>
+            </div><!--/ .col-lg-6 -->
+            
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="FORMID">Email address <span class="required">*</span></label>
+                <input type="text" class="form-control" id="FORMID" placeholder="yourname@example.com">
+              </div>
+            </div><!--/ .col-lg-6 -->
+            
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="FORMID">Phone number <span class="required">*</span></label>
+                <input type="text" class="form-control" id="FORMID" data-mask="(999)999-9999" placeholder="(123) 123-9392">
+              </div>
+            </div><!--/ .col-lg-6 -->
+            
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="FORMID">Location <span class="required">*</span></label>
+                <input type="text" class="form-control" id="FORMID" placeholder="Chandler, Arizona">
+              </div>
+            </div><!--/ .col-lg-6 -->
+          </div><!--/ .row -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-grey pull-left" data-dismiss="modal">Cancel</button>
+        <button type="button" type="submit" class="btn btn-primary">Submit!</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jasny-bootstrap.min.js"></script>
+<script src="assets/js/backstretch.min.js"></script>
+<script src="assets/js/tweecool.js"></script>
+<script src="assets/js/bootstrap-toggle.min.js"></script>
+<script src="assets/js/nucards.js"></script>
+<script src="assets/js/uploadArtwork.js"></script>
+  
+</body>
+</html>
