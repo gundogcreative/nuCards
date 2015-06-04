@@ -15,6 +15,7 @@ TABLE OF CONTENTS
 0.5 -- BUTTONS
 0.5.1 -- TOGGLE INPUT BUTTONS
 0.5.2 -- LABLES
+0.5.3 -- PANELS
 0.6 -- ALERTS
 0.7 -- BOOTSTRAP OVERRIDES
 0.8 -- ICONS
@@ -154,8 +155,11 @@ h4.formSectionTitle {margin:0 0 28px;padding:0 0 8px;border-bottom:1px solid #C9
 .btn-grey {background-color:#B2B4B7;color:#fafafa;border-color:#A5A7AA;}
 .btn-grey:hover, .btn-grey:focus, .btn-grey:active {color:#fff;background-color:#9A9C9E;border-color:#8D8F91;}
 
-.btn i {-webkit-transition:.25s;-moz-transition:.25s;-o-transition:.25s;transition:.25s;}
-.btn:hover i {margin-left:40px;}
+.btn-indesign {background-color:#ff3a93;color:#f2f4f6;border-color:#e5388f;}
+.btn-indesign:hover, .btn-indesign:focus, .btn-indesign:active {background-color:#e5388f;color:#fff;border-color:#cc327f;outline:none;}
+
+/*.btn i {-webkit-transition:.25s;-moz-transition:.25s;-o-transition:.25s;transition:.25s;}
+.btn:hover i {margin-left:40px;}*/
 
 @media (max-width: 480px) {
   .btn {font-size:14px;}
@@ -187,6 +191,13 @@ h4.formSectionTitle {margin:0 0 28px;padding:0 0 8px;border-bottom:1px solid #C9
 .label-primary {background-color:#3776bc;}
 
 .label.nowrap {white-space:normal;}
+
+
+
+/*_____ 0.5.3 - PANELS _____*/
+
+.panel-red {background-color:#bd3737;color:#f2f4f6;border-color:#a32f2f;text-align:center;}
+.panel-small .panel-body {padding:7px 15px;}
 
 
 
@@ -887,6 +898,26 @@ h4.formSectionTitle {margin:0 0 28px;padding:0 0 8px;border-bottom:1px solid #C9
 @media (max-width: 768px) {
   #artworkSubmission hr {margin:37px auto 30px;}
 }
+
+#cardCreationTabs {text-align:center;border:none;margin:30px 0;}
+#cardCreationTabs li {float:right;width:49%;}
+#cardCreationTabs li:first-child {float:left;}
+#cardCreationTabs li a {padding:24px 0;border:solid 1px #c9ccd2;color:#c9ccd2;border-radius:2px;-webkit-border-radius:2px;}
+#cardCreationTabs li a:hover {border-color:#737A84;color:#737A84;background-color:#f0f2f5;}
+#cardCreationTabs li.active a {border-color:#3776bc;color:#3776bc;background-color:#f7f9fc;}
+#cardCreationTabs li.active a:hover {background-color:#f0f2f5;}
+
+.uploadedFiles {margin:10px 0 14px;padding:12px 14px;background-color:#f2f4f6;border-radius:2px;-webkit-border-radius:2px;}
+ul.uploadedFiles {list-style:none;}
+ul.uploadedFiles li {color:#737A84;margin:9px 0;word-break:break-all;}
+ul.uploadedFiles li:first-child {margin-top:0;}
+ul.uploadedFiles li:last-child {margin-bottom:0;}
+
+
+@media (max-width: 768px) {
+  #cardCreationTabs li {font-size:12px;}
+}
+
 
 
 

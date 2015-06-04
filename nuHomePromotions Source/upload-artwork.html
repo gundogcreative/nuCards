@@ -126,6 +126,9 @@
           
           <h4 class="formSectionTitle">2. Branch Details/Requested DID</h4>
           
+          <p>This section is very important. Please select a desired area code and input your business phone number(s) for each branch your company will have a nuCard in.</p>
+          <br/>
+          
           <div class="row well well-sm">
             <div class="col-md-4">
               <div class="form-group">
@@ -158,7 +161,7 @@
             
             <div class="col-md-5">
               <div class="form-group">
-                <label class="form-label" for="ftnumber1">Forward to Number</label>
+                <label class="form-label" for="ftnumber1">Forward to Number <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="The number you want to ring when consumers call in"><i class="fa fa-question-circle"></i></a></label>
                 <input type="text" class="form-control" id="ftnumber1" name="ftnumber1" data-mask="(999)-999-9999" placeholder="Forwarding number...">
               </div><!--/ .form-group -->
             </div><!--/ .col-md-5 -->
@@ -180,7 +183,7 @@
               <label class="form-label">Does your card require a minimum purchase?</label>
               <input type="checkbox" id="minPurchaseCheck" name="minPurchaseCheck" data-toggle="toggle" data-on="Yes" data-off="No">
               <div id="console-event"></div>
-              <p class="help-block"><span class="label label-primary nowrap">Cards with a required minimum purchase might lack performance.</span></p>
+              <p class="help-block"><div class="panel panel-default panel-red panel-small"><div class="panel-body"><i class="fa fa-exclamation-circle"></i> Cards with a required minimum purchase might lack performance.</div></div></p>
             </div><!--/ .form-group -->
           
             <div class="form-group collapse" id="minPurchaseFormGroup">
@@ -221,7 +224,7 @@
             <div class="form-group">
               <label class="form-label" for="backStipulations">Generated Stipulations</label>
               <textarea class="form-control" id="backStipulations" name="backStipulations" rows="6">*Redeemable towards [validTowards]. [minPurchase] minimum purchase required. Cannot be redeemed for cash. Cannot be combined with other offers and or discounts. Limit one per customer. One time use. Some restrictions apply, call for details.</textarea>
-              <p class="help-block"><strong>Limit 500 characters</strong></p>
+              <p class="help-block"><strong>Limit 320 characters</strong></p>
             </div><!--/ .form-group -->
           
             <div class="form-group">
@@ -260,15 +263,62 @@
               
             </div><!--/ #contractorsLicenseFormGroup -->
           
-            <hr>
+          <hr>
           
-            <div class="form-group">
-              <label class="form-label" for="artSpecial">Artwork Special Requests</label>
-              <textarea class="form-control" id="artSpecial" name="artSpecial" rows="3"></textarea>
-            </div><!--/ .form-group -->
+          <h4 class="formSectionTitle">4. nuCard Artwork & Design</h4>
+          
+            <h5 style="text-align:center;padding:14px 0;">Please Select An Option</h5>
+          
+            <ul id="cardCreationTabs" class="nav nav-tabs">
+              <li class="active"><a href="#internalCreation" id="internalCreation-tab" data-toggle="tab">I Want My <span class="nucards">nuCard</span></br/>Created For Me</a></li>
+              <li><a href="#outsideCreation" id="outsideCreation-tab" data-toggle="tab">I'll Create My<br/>Own <span class="nucards">nuCard</span></a></li>
+            </ul>
+          
+            <div id="cardCreationOptions" class="tab-content">
+              <div id="internalCreation" class="tab-pane fade active in">
+                <div class="form-group">
+                  <label class="form-label" for="minPurchase">Upload your logo</label>
+                  <p class="help-block">Suggested format: .ai, .eps, .png, .jpg (minimum size for raster-based images: 1000px - vector graphics work best)</p>
+                  <button type="file" class="btn btn-default"><i class="fa fa-upload"></i> Upload Logo</button>
+                  <p class="uploadedFiles">FileNameGoesHere.png <span><a href="#"><i class="fa fa-times"></i></a></span></p>
+                </div><!--/ .form-group -->
+
+                <div class="form-group">
+                  <label class="form-label" for="designRequests">Design Suggestions?</label>
+                  <textarea class="form-control" id="designRequests" name="designRequests" rows="4" placeholder="Any input or ideas for your card's design?"></textarea>
+                </div><!--/ .form-group -->
+                
+                <div class="form-group">
+                  <label class="form-label" for="minPurchase">Upload additional images/assets</label>
+                  <p class="help-block">All images must meet certain requirements to be used for production. Please be aware that if your images are not to our standard, they will not be used. We require all images to be 300 DPI at a minimum size of 800px.</p>
+                  <button type="file" class="btn btn-default"><i class="fa fa-upload"></i> Upload Image(s)</button>
+                  <ul class="uploadedFiles">
+                    <li>OneMoreFileNameGoesHere.png <span><a href="#"><i class="fa fa-times"></i></a></span></li>
+                    <li>AdditionalFileNameGoesHere.png <span><a href="#"><i class="fa fa-times"></i></a></span></li>
+                    <li>ShortName.jpg <span><a href="#"><i class="fa fa-times"></i></a></span></li>
+                    <li>AReallyReallyReallyReallyReallyReallyReallyReallyReallyReallyLongName.png <span><a href="#"><i class="fa fa-times"></i></a></span></li>
+                  </ul>
+                </div><!--/ .form-group -->
+
+                <div class="form-group">
+                  <label class="form-label" for="specialRequests">Additional Special Requests</label>
+                  <textarea class="form-control" id="specialRequests" name="specialRequests" rows="4" placeholder="Any other special requests?"></textarea>
+                </div><!--/ .form-group -->
+              </div><!--/ #internalCreation -->
+              
+              <div id="outsideCreation" class="tab-pane fade">
+                <div class="form-group">
+                  <label class="form-label" for="minPurchase">Want to design your own nuCard? (optional)</label>
+                  <p class="help-block">We have a team of graphic designers waiting to assist you with the creation of your <span class="nucards">nuCard</span> but if you choose, you may download our template so you can design your own <span class="nucards">nuCard</span>.</p>
+                  <button type="submit" class="btn btn-indesign"><i class="fa fa-download"></i> <span class="nucards">nuCard</span> InDesign Template (.indd CC)</button>
+                  <p class="help-block">Click above to download template</p>
+                  <p class="help-block"><strong>NOTE:</strong> If you plan on designing your own <span class="nucards">nuCard</span>, please follow the instructions within our template.</p>
+                </div><!--/ .form-group -->
+              </div><!--/ #outsideCreation -->
+            </div><!--/ #cardCreationOptions -->    
           
           <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Submit to Art Department</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit nuCard Details</button>
           </div><!--/ .form-group -->
         </form><!--/ #artworkSubmission -->
         
